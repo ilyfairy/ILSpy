@@ -46,6 +46,11 @@ namespace ICSharpCode.Decompiler.Metadata
 			return elementType;
 		}
 
+		public FullTypeName GetConstValueType(FullTypeName type, object? value)
+		{
+			return type;
+		}
+
 		public FullTypeName GetFunctionPointerType(MethodSignature<FullTypeName> signature)
 		{
 			return default;

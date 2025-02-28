@@ -194,5 +194,10 @@ namespace ICSharpCode.Decompiler.TypeSystem
 		{
 			return type.IsKnownType(KnownTypeCode.Type);
 		}
+
+		public IType GetConstValueType(IType type, object value)
+		{
+			return type;
+		}
 	}
 }

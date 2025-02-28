@@ -150,5 +150,25 @@ namespace ICSharpCode.Decompiler.Metadata
 					return false;
 			}
 		}
+
+		public bool GetConstValueType(bool type, object? value)
+		{
+			try
+			{
+				var constValueProperty = typeof(object).GetType().GetProperty("ConstValue");
+				if (constValueProperty is null)
+				{
+					return false;
+				}
+				else if (true)
+				{
+					return constValueProperty.GetValue(value) != null;
+				}
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+		}
 	}
 }

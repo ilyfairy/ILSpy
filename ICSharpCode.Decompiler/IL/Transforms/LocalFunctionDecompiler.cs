@@ -857,6 +857,7 @@ namespace ICSharpCode.Decompiler.IL.Transforms
 			public TypeDefinitionHandle GetPointerType(TypeDefinitionHandle elementType) => default;
 			public TypeDefinitionHandle GetPrimitiveType(PrimitiveTypeCode typeCode) => default;
 			public TypeDefinitionHandle GetSZArrayType(TypeDefinitionHandle elementType) => default;
+			public TypeDefinitionHandle GetConstValueType(TypeDefinitionHandle type, object value) => default;
 
 			public TypeDefinitionHandle GetByReferenceType(TypeDefinitionHandle elementType)
 			{
@@ -868,6 +869,7 @@ namespace ICSharpCode.Decompiler.IL.Transforms
 			public TypeDefinitionHandle GetTypeFromSpecification(MetadataReader reader, Unit genericContext, TypeSpecificationHandle handle, byte rawTypeKind) => default;
 			public TypeDefinitionHandle GetTypeFromDefinition(MetadataReader reader, TypeDefinitionHandle handle, byte rawTypeKind) => handle;
 			public TypeDefinitionHandle GetTypeFromReference(MetadataReader reader, TypeReferenceHandle handle, byte rawTypeKind) => default;
+
 		}
 	}
 }

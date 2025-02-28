@@ -723,6 +723,8 @@ namespace ICSharpCode.Decompiler
 			{
 				return reader.GetTypeSpecification(handle).DecodeSignature(this, genericContext);
 			}
+
+			public int GetConstValueType(int type, object value) => type;
 		}
 
 		public static EntityHandle GetBaseTypeOrNil(this TypeDefinition definition)

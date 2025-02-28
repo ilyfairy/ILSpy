@@ -84,8 +84,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Collections.Immutable" Version="6.0.0" />
-    <PackageReference Include="System.Reflection.Metadata" Version="6.0.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="9.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -738,5 +737,12 @@
   <Target Name="CleanUpdateAssemblyInfo" BeforeTargets="BeforeClean">
     <Delete Files="@(UpdateAssemblyInfoStamp);..\VERSION" />
   </Target>
+
+
+  <ItemGroup>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>Library/System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

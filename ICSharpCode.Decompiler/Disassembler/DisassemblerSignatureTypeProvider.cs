@@ -268,5 +268,16 @@ namespace ICSharpCode.Decompiler.Disassembler
 		{
 			return reader.GetTypeSpecification(handle).DecodeSignature(this, genericContext);
 		}
+
+		public Action<ILNameSyntax> GetConstValueType(Action<ILNameSyntax> type, object value)
+		{
+			return syntax => {
+				var syntaxForElementTypes = syntax == ILNameSyntax.SignatureNoNamedTypeParameters ? syntax : ILNameSyntax.Signature;
+				type(syntaxForElementTypes);
+				output.Write('(');
+				output.Write(value?.ToString() ?? "null");
+				output.Write(')');
+			};
+		}
 	}
 }
